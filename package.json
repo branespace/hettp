@@ -1,0 +1,29 @@
+{
+  "name": "httpframework",
+  "version": "0.1.0",
+  "description": "simple http framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/branespace/httpframework.git"
+  },
+  "author": "Gregory",
+  "contributors": [
+    "Earl Duncan"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/branespace/httpframework/issues"
+  },
+  "homepage": "https://github.com/branespace/httpframework#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-http": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-mocha": "^2.1.3"
+  }
+}
