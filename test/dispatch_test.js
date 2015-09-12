@@ -7,34 +7,30 @@ var expect = require('chai').expect,          //assertions library
         alpha: 2                            //sample callback counter
     };
 
-describe('dispatcher', function(){
-    before(function(){
-        //Add functions to queue
-        dispatcher.use(testFunc);
-        dispatcher.use(testFunc);
-        dispatcher.use(testFunc);
-        dispatcher.use(doneFunc);
-    });
-    it('should dispatch functions', function(done){
+describe('dispatcher', function () {
+    var testSequence = [
+        {func: testFunc, params:[config]},
+        {func: testFunc, params:[config]},
+        {func: testFunc, params:[config]},
+        {func: doneFunc, params:[config]}];
+    it('should dispatch functions', function (done) {
         //Begin dispatch
         //If it doesn't time out, callbacks were successful
-        dispatcher.exec(null, done, config);
+        dispatcher.exec(function(){}, done, testSequence);
     });
-    it('properly scope variables', function(){
+    it('properly scope variables', function () {
         //testFunc increments counter 3 times (2 + 3 = 5)
         expect(config.alpha).to.be.equal(5);
     });
 });
 
 //Test callbacks with variables in another scope
-function testFunc(req, res, callback){
-    /*jshint validthis:true*/
-    this.config.alpha++;
-    /*jshint validthis:false*/
-    callback(req, res);
+function testFunc(req, res, callback, config) {
+    config.alpha++;
+    callback();
 }
 
 //Terminate test
-function doneFunc(req, res, callback){
-    res();
+function doneFunc(req, done, callback) {
+    done();
 }
