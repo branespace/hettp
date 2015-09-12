@@ -1,6 +1,6 @@
 "use strict";
 
-var chai = require('chai').expect,          //assertions library
+var expect = require('chai').expect,          //assertions library
     Dispatch = require('./../lib/dispatch'),//Dispatch constructor
     dispatcher = new Dispatch(),            //construct new dispatch object
     config = {
