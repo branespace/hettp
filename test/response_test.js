@@ -12,7 +12,7 @@ var res = {
     expect(body).to.eql("success");
   },
   end: function(){
-  this.done();
+  this.done();  //end is called by writer, checks to see if end is firing.
   }
 };
 
