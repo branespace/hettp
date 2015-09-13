@@ -1,5 +1,5 @@
 {
-  "name": "httpframework",
+  "name": "hettp",
   "version": "0.1.0",
   "description": "simple http framework",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/branespace/httpframework.git"
+    "url": "git+https://github.com/branespace/hettp.git"
   },
   "author": "Gregory",
   "contributors": [
@@ -16,9 +16,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/branespace/httpframework/issues"
+    "url": "https://github.com/branespace/hettp/issues"
   },
-  "homepage": "https://github.com/branespace/httpframework#readme",
+  "homepage": "https://github.com/branespace/hettp#readme",
   "devDependencies": {
     "chai": "^3.2.0",
     "chai-http": "^1.0.0",
