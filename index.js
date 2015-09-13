@@ -2,7 +2,7 @@
 
 var server = require('./lib/app');
 
-server.use(require('./lib/logger'));
+server.use(require('./lib/logger'), ['test.log']);
 server.get('/', function (req, res) {
     res.writer(200, 'text', 'success!');
 });
