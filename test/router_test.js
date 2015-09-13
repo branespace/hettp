@@ -1,6 +1,6 @@
 "use strict";
 
-var Router = new require('./../lib/router').Router,
+var Router = new require('./../lib/router'),
     expect = require('chai').expect;
 
 describe('router', function(){
