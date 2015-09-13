@@ -2,10 +2,9 @@
 
 var server = require('./lib/app');
 
+server.use(require('./lib/logger'));
 server.get('/', function (req, res) {
-    res.writeHead(200, {"Content-Type": "text/plain"});
-    res.write('success!');
-    res.end();
+    res.writer(200, 'text', 'success!');
 });
 
 var serv = server.listen(3000);
