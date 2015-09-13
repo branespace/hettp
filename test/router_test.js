@@ -33,6 +33,16 @@ describe('router', function(){
         router.get('/notes/tango', routerTest2);
         router.route(wrapper, done);
     });
+    it('should process through middleware', function(done){
+        var router = new Router();
+        var wrapper = {
+            url: '/notes/tango/spark',
+            method: 'GET'
+        };
+        router.use(routerTest3);
+        router.get('/notes/tango', routerTest2);
+        router.route(wrapper, done);
+    });
 });
 
 function routerTest(req, done){
@@ -45,4 +55,8 @@ function errorEmitted(req, done){
 
 function routerTest2(req, done){
     done();
+}
+
+function routerTest3(req, done, next){
+    next();
 }
