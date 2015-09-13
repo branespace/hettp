@@ -4,14 +4,13 @@ var logger = require("./../lib/logger");
 var fs = require("fs");
 
 
-var exLog = {
- 	//timestamp: (new Date(2000)),
+var exLog = { //stub log matching relevant parts of real log
  	method: 'GET',
  	url: '/',
  	origin: '127.0.0.1'
  };
 
-var req = {   //stubbed params matching real req
+var req = {   //stub req matching relevant parts of real req
 	method: 'GET',
 	url: '/',
 	socket: {
@@ -21,7 +20,7 @@ var req = {   //stubbed params matching real req
 
 var wrapper = {
 	config: {
-    log: __dirname + '/' + (new Date()).getTime();
+    log: __dirname + '/' + (new Date()).getTime()
   }
 };
 
@@ -40,5 +39,5 @@ describe("logger", function(){
     fs.unlink(wrapper.config.log, function(){
       done();
     });
-  })
+  });
 });
