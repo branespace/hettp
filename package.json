@@ -1,6 +1,6 @@
 {
   "name": "hettp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "simple http framework",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/branespace/hettp.git"
   },
-  "author": "Gregory",
+  "author": "Gregory Irwin",
   "contributors": [
     "Earl Duncan"
   ],
