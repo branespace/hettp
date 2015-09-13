@@ -2,7 +2,7 @@
   "name": "hettp",
   "version": "1.0.0",
   "description": "simple http framework",
-  "main": "index.js",
+  "main": "./lib/app.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha"
   },
